@@ -1,0 +1,13 @@
+.protected-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
