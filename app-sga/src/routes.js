@@ -10,7 +10,7 @@ import Fornecedor from "./pages/Fornecedor";
 import Vendas from "./pages/Vendas";
 import Relatorio from "./pages/Relatorio";
 import Cliente from "./pages/Cliente";
-import ProtectedLayout from "./ProtectedLayout"; // Importando o layout protegido
+import ProtectedLayout from "./components/ProtectedLayout"; // Importando o layout protegido
 
 function AppRoutes() {
   return (
@@ -18,14 +18,7 @@ function AppRoutes() {
       <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Registro />} />
-      <Route
-        path="/home"
-        element={
-          <ProtectedLayout>
-            <Home />
-          </ProtectedLayout>
-        }
-      />
+      <Route path="/home" element={<Home />} />
       <Route
         path="/produto"
         element={

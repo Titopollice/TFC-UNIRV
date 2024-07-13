@@ -1,34 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Sidebar.css"; // Certifique-se de criar este arquivo para estilos específicos
 
 function Sidebar() {
   return (
-    <aside>
+    <aside className="sidebar">
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/produto">Produtos</Link>
           </li>
           <li>
-            <Link to="/ContasPagar">Contas a Pagar</Link>
+            <Link to="/contasPagar">Contas a Pagar</Link>
           </li>
           <li>
-            <Link to="/ContasReceber">Contas a Receber</Link>
+            <Link to="/contasReceber">Contas a Receber</Link>
           </li>
           <li>
-            <Link to="/Fornecedor">Fornecedores</Link>
+            <Link to="/fornecedores">Fornecedores</Link>
           </li>
           <li>
-            <Link to="/Vendas">Vendas</Link>
+            <Link to="/vendas">Vendas</Link>
           </li>
           <li>
-            <Link to="/Relatorio">Relatórios</Link>
+            <Link to="/relatorio">Relatórios</Link>
           </li>
           <li>
-            <Link to="/Cliente">Clientes</Link>
+            <Link to="/cliente">Clientes</Link>
           </li>
         </ul>
       </nav>
