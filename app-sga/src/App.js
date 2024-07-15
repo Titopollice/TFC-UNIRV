@@ -4,6 +4,7 @@ import AppRoutes from "./routes"; // Certifique-se de que o caminho está corret
 import Footer from "./components/Footer";
 import "./App.css";
 
+
 function App() {
   return (
     <Router>

@@ -1,50 +1,22 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css"; // Importando o CSS específico para o Login
+import React from 'react';
+import './Login.css'; // Ajustando o caminho relativo para o CSS
+import logo from '../assets/L.jpg' // Ajustando o caminho relativo para a imagem
 
-function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Simulação de autenticação
-    if (username === "admin" && password === "admin") {
-      navigate("/home");
-    } else {
-      alert("Credenciais inválidas");
-    }
-  };
-
-  return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Usuário:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+const Login = () => {
+    return (
+        
+        <div className="container">
+            <img src={logo} alt="Logo" className="logo"  />             
+            <h1 className="title">Adegas SG</h1>
+            <form>
+                <input type="text" placeholder="Nome de usuário" required />
+                <input type="password" placeholder="Senha" required />
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="#">Esqueceu a senha?</a>
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Senha:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
-  );
-}
+        
+    );
+};
 
 export default Login;

@@ -1,40 +1,81 @@
-.login-container {
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container {
   width: 300px;
-  margin: 100px auto;
+  background-color: #001f3f;
   padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  margin: auto; 
+  margin-top: 200px; 
+}
+
+
+/* Estilo do logotipo */
+.logo {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  border: 2px solid #000; 
+  border-radius: 10px; 
+}
+
+
+/* Estilo do título */
+.title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"], input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: calc(100% - 20px);
-  padding: 8px;
   box-sizing: border-box;
-  margin-left: 10px;
 }
 
+/* Estilo do botão */
 button {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  background-color: #28bc1b;
-  color: white;
+  background-color: #28a745;
   border: none;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Estilo do link de esquecimento de senha */
+a {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+

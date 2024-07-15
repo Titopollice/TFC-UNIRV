@@ -1,23 +1,7 @@
-body {
-  background-color: #001f3f;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 .home-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.home-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #001f3f;
-  color: white;
-  height: 5px;
 }
 
 .user-info {
@@ -32,7 +16,8 @@ body {
 .home-nav {
   background-color: #001f3f;
   padding: 10px;
-  color: white;
+  margin-top: 200px; /* Adiciona margem ao nav */
+  color: rgb(255, 255, 255);
 }
 
 .home-nav ul {
@@ -41,21 +26,38 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
+  border-top: 4px solid #ffffff; /* Adiciona uma linha acima das categorias */
+  width: 70%; /* Ajusta a largura da linha */
+  margin: 0 auto; /* Centraliza horizontalmente a linha */
 }
 
 .home-nav li {
   margin: 0 20px;
+  position: relative; /* Adiciona posição relativa para posicionamento da borda */
 }
 
-.home-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.home-nav li.active a {
+  color: #ff0000; /* Cor de destaque para o item ativo */
+}
+
+.home-nav li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 75%;
+  right: -20px; /* Ajusta a posição da borda */
+  transform: translateY(-50%);
+  height: 60%; /* Ajusta a altura da linha */
+  width: 2px; /* Largura da linha */
+  background-color: #ffffff; /* Cor da linha */
 }
 
 .home-main {
   flex: 1;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
   background-color: #001f3f;
 }
 
@@ -63,14 +65,14 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .card {
-  background-color: white;
+  background-color: #aaaaaa;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
   width: 150px;
   text-decoration: none;
@@ -80,6 +82,7 @@ body {
 
 .card:hover {
   transform: scale(1.05);
+  color: #aaaaaa;
 }
 
 .card-icon {
@@ -89,15 +92,5 @@ body {
 
 .card-title {
   font-weight: bold;
-  color: #001f3f;
+  color: #fdfdfd;
 }
-
-/* .home-footer {
-  text-align: center;
-  padding: 50px;
-  background-color: #001f3f;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-} */
