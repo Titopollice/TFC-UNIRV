@@ -6,7 +6,6 @@ body {
 }
 
 
-
 .container {
   width: 300px;
   background-color: #001f3f;
@@ -38,7 +37,7 @@ body {
 }
 
 /* Estilo dos campos de entrada */
-input[type="text"], input[type="password"] {
+.container input[type="text"], .container input[type="password"] {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 20px;
@@ -46,6 +45,7 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
 
 /* Estilo do botão */
 button {

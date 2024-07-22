@@ -2,6 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Produto.css"; // Certifique-se de criar este arquivo para estilos específicos
 
+// Exemplo de dados dos produtos
+const produtos = [
+  { id: 1, nome: "Produto 1", medida: "Unidade", valorCusto: 10.00, lucro: 20, valorVenda: 12.00, categoria: "Vinho", quantidadeAtual: 100, marca: "Marca A", ano: 2022 },
+  { id: 2, nome: "Produto 2", medida: "Unidade", valorCusto: 15.00, lucro: 25, valorVenda: 18.75, categoria: "Vinho", quantidadeAtual: 50, marca: "Marca B", ano: 2021 },
+  // Adicione mais produtos conforme necessário
+];
+
 function Produto() {
   const navigate = useNavigate();
 
@@ -24,9 +31,9 @@ function Produto() {
   return (
     <div className="produto-container">
       <nav className="produto-nav">
-        <button className="back-button" onClick={handleBack}>
+        {/* <button className="back-button" onClick={handleBack}>
           Voltar
-        </button>
+        </button> */}
       </nav>
       <main className="produto-main">
         <h2>Estoque</h2>
@@ -35,8 +42,37 @@ function Produto() {
           <input type="text" />
           <button className="search-button">🔍</button>
         </div>
-        <div className="produto-list">
-          {/* Aqui você pode mapear e listar os produtos existentes */}
+        <div className="produto-table-container">
+          <table className="produto-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Medida</th>
+                <th>Valor de Custo</th>
+                <th>% Lucro</th>
+                <th>Valor de Venda</th>
+                <th>Categoria</th>
+                <th>Quantidade Atual</th>
+                <th>Marca</th>
+                <th>Ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              {produtos.map((produto) => (
+                <tr key={produto.id}>
+                  <td>{produto.nome}</td>
+                  <td>{produto.medida}</td>
+                  <td>{produto.valorCusto.toFixed(2)}</td>
+                  <td>{produto.lucro}%</td>
+                  <td>{produto.valorVenda.toFixed(2)}</td>
+                  <td>{produto.categoria}</td>
+                  <td>{produto.quantidadeAtual}</td>
+                  <td>{produto.marca}</td>
+                  <td>{produto.ano}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
         <div className="produto-form">
           <div className="form-row">

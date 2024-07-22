@@ -53,12 +53,13 @@ body {
 }
 
 .search-button {
-  padding: 5px 10px;
+  padding: 5px 1px;
   cursor: pointer;
   background-color: #0074d9;
   color: white;
   border: none;
   font-size: 16px;
+  width: 10%;
 }
 
 .produto-form {
@@ -73,15 +74,18 @@ body {
 
 .form-row label {
   margin-right: 10px;
-  width: 150px; /* Ajuste a largura conforme necessário */
+  min-width: 150px; /* Ajuste a largura conforme necessário */
+  text-align: right; /* Alinha o texto à direita */
 }
 
 .form-row input,
 .form-row select {
-  flex: 1;
+  flex: 1 1;
   padding: 5px;
-  margin-right: 10px;
+  margin-left: 10px; /* Espaço entre o label e o campo */
+  margin-top: 10px; /* Adiciona espaço no topo */
 }
+
 
 .produto-actions {
   display: flex;
@@ -115,4 +119,34 @@ body {
 .produto-actions .back-button {
   background-color: gray;
   color: white;
+}
+
+/* Outros estilos já existentes */
+
+.produto-table-container {
+  margin-top: 20px;
+}
+
+.produto-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+  .produto-table th, .produto-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+.produto-table th {
+  background-color: #0074d9;
+  color: white;
+}
+
+.produto-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.produto-table tr:hover {
+  background-color: #ddd;
 }
