@@ -61,11 +61,12 @@ function Home() {
               <div className="card-icon">📦</div>
               <div className="card-title">Entrada de Estoque</div>
             </Link>
-            <Link to="/Venda Realizadas" className="card">
+            <Link to="/RelVendas" className="card">
               <div className="card-icon">👥</div>
               <div className="card-title">Venda Realizadas</div>
+
             </Link>
-            <Link to="/A Pagar" className="card">
+            <Link to="/RelPagar" className="card">
               <div className="card-icon">🏢</div>
               <div className="card-title">A Pagar</div>
             </Link>

@@ -1,0 +1,84 @@
+.rel-vendas-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+    position: absolute; /* Usa posição absoluta para centralização */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o elemento */
+  }
+  
+  .rel-vendas-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .rel-vendas-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .date-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Alinha os labels à esquerda */
+  }
+  
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .date-fields .form-group:first-child {
+    margin-right: 10px; /* Adiciona espaço à direita do primeiro campo de data */
+  }
+  
+  .date-fields .form-group:last-child {
+    margin-left: 10px; /* Adiciona espaço à esquerda do segundo campo de data */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .gerar-btn, .voltar-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Ajusta a largura para uma distribuição uniforme */
+  }
+  
+  .gerar-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  
+  .voltar-btn {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+  
+  .gerar-btn:hover, .voltar-btn:hover {
+    opacity: 0.9;
+  }
+  

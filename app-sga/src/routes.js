@@ -10,6 +10,8 @@ import Fornecedor from "./pages/Fornecedor";
 import Vendas from "./pages/Vendas";
 import Relatorio from "./pages/Relatorio";
 import Cliente from "./pages/Cliente";
+import RelVendas from "./pages/RelVendas";
+import RelPagar from "./pages/RelPagar";
 import ProtectedLayout from "./components/ProtectedLayout"; // Importando o layout protegido
 
 function AppRoutes() {
@@ -19,6 +21,8 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Registro />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/RelVendas" element={<RelVendas />} />
+      <Route path="/RelPagar" element={<RelPagar />} />
       <Route
         path="/produto"
         element={
@@ -72,6 +76,22 @@ function AppRoutes() {
         element={
           <ProtectedLayout>
             <Cliente />
+          </ProtectedLayout>
+        }
+      />
+      <Route
+        path="/RelVendas"
+        element={
+          <ProtectedLayout>
+            <RelVendas />
+          </ProtectedLayout>
+        }
+      />
+      <Route
+        path="/RelPagar"
+        element={
+          <ProtectedLayout>
+            <RelPagar />
           </ProtectedLayout>
         }
       />
