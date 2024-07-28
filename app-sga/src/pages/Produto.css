@@ -1,18 +1,17 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 .produto-container {
   padding: 20px;
   background-color: #f1f1f1;
-  min-height: 100vh; /* Garante que ocupe a altura total da tela */
+  min-height: 100vh;
+  max-width: 1800px; /* Define um max-width para centralizar o conteúdo */
+  margin: auto; /* Centraliza o container */
+  font-family: 'Verdana', sans-serif;
 }
 
 .produto-nav {
-  display: flex;
+  display: left;
   justify-content: flex-end;
   margin-bottom: 20px;
+  
 }
 
 .produto-nav button {
@@ -23,6 +22,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-left: 10px;
+  border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
 }
 
 .produto-nav button:hover {
@@ -34,11 +34,13 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Centraliza o conteúdo */
 }
 
 .produto-search {
   display: flex;
   align-items: center;
+  justify-content: center; /* Centraliza horizontalmente os itens dentro do contêiner */
   margin-bottom: 20px;
 }
 
@@ -47,19 +49,60 @@ body {
 }
 
 .produto-search input {
-  flex: 1;
+  width: 1450px; /* Define um comprimento fixo para a barra de pesquisa */
   padding: 5px;
   margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .search-button {
-  padding: 5px 1px;
+  padding: 5px 10px;
   cursor: pointer;
   background-color: #0074d9;
   color: white;
   border: none;
   font-size: 16px;
-  width: 10%;
+  border-radius: 8px;
+  width: 190px; /* Define uma largura fixa para o botão */
+}
+
+.produto-actions-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os botões de ação */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 5px; /* Espaço acima dos botões */
+}
+
+.produto-actions-container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.produto-actions-container .add-button {
+  background-color: #b605f1; /* Alterar para a cor desejada para "Adicionar" */
+  color: white;
+}
+
+.produto-actions-container .back-button {
+  background-color: #6c757d; /* Alterar para a cor desejada para "Voltar" */
+  color: white;
+}
+
+.produto-actions-container .add-button:hover, 
+.produto-actions-container .back-button:hover {
+  background-color: #005bb5; /* Cor ao passar o mouse (opcional) */
 }
 
 .produto-form {
@@ -70,40 +113,45 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 .form-row label {
   margin-right: 10px;
-  min-width: 150px; /* Ajuste a largura conforme necessário */
-  text-align: right; /* Alinha o texto à direita */
+  min-width: 150px;
+  text-align: right;
 }
 
 .form-row input,
 .form-row select {
-  flex: 1 1;
+  flex: 1;
   padding: 5px;
-  margin-left: 10px; /* Espaço entre o label e o campo */
-  margin-top: 10px; /* Adiciona espaço no topo */
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
+.produto-actions {
+  display: flex;  
+  flex-direction: column; /* Organiza os botões verticalmente */
+  align-items: flex-end; /* Alinha os botões no canto direito */
+  margin-top: 20px;
+}
 
 .produto-actions {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Organiza os botões verticalmente */
+  align-items: flex-end; /* Alinha os botões no canto direito */
   margin-top: 20px;
 }
 
 .produto-actions button {
-  padding: 10px 20px;
+  padding: 10px 20px; /* Tamanho padrão dos botões */
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  margin-right: 10px; /* Adiciona espaço entre os botões */
-}
-
-.produto-actions .delete-button {
-  background-color: red;
-  color: white;
+  font-size: 14px;
+  border-radius: 8px;
+  margin: 5px 0; /* Espaço entre os botões */
+  transition: all 0.3s ease; /* Adiciona transição suave */
 }
 
 .produto-actions .save-button {
@@ -111,17 +159,15 @@ body {
   color: white;
 }
 
-.produto-actions .add-button {
-  background-color: blue;
+.produto-actions .delete-button {
+  background-color: red;
   color: white;
 }
 
-.produto-actions .back-button {
-  background-color: gray;
-  color: white;
+.produto-actions .save-button:hover,
+.produto-actions .delete-button:hover {
+  opacity: 0.8;
 }
-
-/* Outros estilos já existentes */
 
 .produto-table-container {
   margin-top: 20px;
@@ -132,11 +178,12 @@ body {
   border-collapse: collapse;
 }
 
-  .produto-table th, .produto-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
+.produto-table th, .produto-table td {
+  border: 1px solid #ddd;
+  padding: 9px;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+}
 
 .produto-table th {
   background-color: #0074d9;
